@@ -12,7 +12,7 @@ uses:
   type: 
     resourceTypes.collection:
       typeResource: file-types.Carros
-      exampleCollection: !include examples/CarsGet.json
+      exampleCollection: !include examples/cars/CarsGet.json
       typePostRequestResource: file-types.Carro
       typePostResponseResource: file-types.Mensagem
       exampleItemResponse: { "mensagem": "O carro foi adicionado" }
@@ -35,11 +35,11 @@ uses:
         type: string
         example: "2016"
   post:
-/employes:
+/employees:
   type: 
     resourceTypes.collection:
       typeResource: file-types.Funcionarios
-      exampleCollection: !include examples/EmployesGet.json
+      exampleCollection: !include examples/employees/EmployeesGet.json
       typePostRequestResource: file-types.Funcionario
       typePostResponseResource: file-types.Mensagem
       exampleItemResponse: { "mensagem": "O funcionário foi adicionado" }
@@ -58,19 +58,19 @@ uses:
           body: 
             application/json:
               schema: file-types.Funcionario
-              example: !include examples/EmployeGetById.json
+              example: !include examples/employees/EmployeeGetById.json
     put:
       description: Update the employe
       body:
         application/json:
           type: file-types.Funcionario
-          example: !include examples/EmployePut.json
+          example: !include examples/employees/EmployeePut.json
       responses:
         200:
           body: 
             application/json:
               schema: file-types.Funcionario
-              example: !include examples/EmployePut.json
+              example: !include examples/employees/EmployeePut.json
     delete:
       responses:
         200:
@@ -85,7 +85,7 @@ uses:
   type: 
     resourceTypes.collection:
       typeResource: file-types.Clientes
-      exampleCollection: !include examples/ClientsGet.json
+      exampleCollection: !include examples/clients/ClientsGet.json
       typePostRequestResource: file-types.Cliente
       typePostResponseResource: file-types.Mensagem
       exampleItemResponse: { "mensagem": "O Cliente foi adicionado" }
@@ -105,13 +105,13 @@ uses:
           body: 
             application/json:
               schema: file-types.Cliente
-              example: !include examples/ClientGetById.json
+              example: !include examples/clients/ClientGetById.json
               
 /sellings:
   type: 
     resourceTypes.collection:
       typeResource: file-types.Vendas
-      exampleCollection: !include examples/sellingsGet.json
+      exampleCollection: !include examples/sells/sellingsGet.json
       typePostRequestResource: file-types.Venda
       typePostResponseResource: file-types.Mensagem
       exampleItemResponse: { "mensagem": "A venda foi efetuada com sucesso!" }

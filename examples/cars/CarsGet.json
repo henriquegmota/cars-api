@@ -1,0 +1,13 @@
+{
+  "carros": [{
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "ano": "2018",
+    "placa": "DDD-0011"
+}, {
+    "marca": "Toyota",
+    "modelo": "Etios",
+    "ano": "2018",
+    "placa": "DDD-1122"
+  }]
+}
