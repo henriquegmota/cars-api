@@ -1,0 +1,130 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/16ef8306-49e7-4ce4-8131-ee702592f65d
+title: car-api
+version: 1.0
+mediaType: application/json
+
+uses:
+  file-types: libraries\my_types.raml
+  resourceTypes: standards\resourceTypes.raml
+  
+/cars:
+  type: 
+    resourceTypes.collection:
+      typeResource: file-types.Carros
+      exampleCollection: !include examples/CarsGet.json
+      typePostRequestResource: file-types.Carro
+      typePostResponseResource: file-types.Mensagem
+      exampleItemResponse: { "mensagem": "O carro foi adicionado" }
+  get:
+    queryParameters: 
+      marca:
+        description: "buscar todos os carros desta marca"
+        required: false
+        minLength: 1
+        type: string
+        example: "Toyota"
+      modelo:
+        description: "buscar todos os carros deste modelo"
+        required: false
+        type: string
+        example: "Corolla"
+      ano:
+        description: "buscar todos os carros deste ano"
+        required: false
+        type: string
+        example: "2016"
+  post:
+/employes:
+  type: 
+    resourceTypes.collection:
+      typeResource: file-types.Funcionarios
+      exampleCollection: !include examples/EmployesGet.json
+      typePostRequestResource: file-types.Funcionario
+      typePostResponseResource: file-types.Mensagem
+      exampleItemResponse: { "mensagem": "O funcionário foi adicionado" }
+  get:
+  post:
+    queryParameters: 
+      access_token:
+        description: "chave para poder inserir um novo funcionario"
+        required: true
+        type: string
+        example: "ASDSD105654"
+  /{id}:
+    get:
+      responses: 
+        200:
+          body: 
+            application/json:
+              schema: file-types.Funcionario
+              example: !include examples/EmployeGetById.json
+    put:
+      description: Update the employe
+      body:
+        application/json:
+          type: file-types.Funcionario
+          example: !include examples/EmployePut.json
+      responses:
+        200:
+          body: 
+            application/json:
+              schema: file-types.Funcionario
+              example: !include examples/EmployePut.json
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              example: {"mensagem": "O funcionário foi deletedo"}
+              
+  
+
+
+/clients:
+  type: 
+    resourceTypes.collection:
+      typeResource: file-types.Clientes
+      exampleCollection: !include examples/ClientsGet.json
+      typePostRequestResource: file-types.Cliente
+      typePostResponseResource: file-types.Mensagem
+      exampleItemResponse: { "mensagem": "O Cliente foi adicionado" }
+  get:
+    queryParameters: 
+      nome:
+        description: "buscar todos os clientes com este nome"
+        required: false
+        minLength: 3
+        type: string
+        example: "Matheus"
+  post:
+  /{id}:
+    get:
+      responses: 
+        200:
+          body: 
+            application/json:
+              schema: file-types.Cliente
+              example: !include examples/ClientGetById.json
+              
+/sellings:
+  type: 
+    resourceTypes.collection:
+      typeResource: file-types.Vendas
+      exampleCollection: !include examples/sellingsGet.json
+      typePostRequestResource: file-types.Venda
+      typePostResponseResource: file-types.Mensagem
+      exampleItemResponse: { "mensagem": "A venda foi efetuada com sucesso!" }
+  get:
+    queryParameters: 
+      data:
+        description: "buscar todas vendas com esta data"
+        required: false
+        type: string
+        example: "10/06/2017"
+      funcionario:
+        description: "busca todas as vendas deste funcionario"
+        required: false
+        type: string
+        example: "José"
+  post:

@@ -1,0 +1,51 @@
+{
+  "funcionarios": [{
+    "codigo": 1,
+    "nome": "Tobias da Silva",
+    "sexo": "Masculino",
+    "dataNascimento": "23/01/1990",
+    "endereco": {
+      "cep": "02615-000",
+      "logradouro": "Rua xico",
+      "numero" : "10",
+      "complemento" : "casa 1",
+      "referencia" : "Atravessa da Av. X",
+      "tipo" : "Residencial"
+    },
+    "telefones": [{
+      "ddd" : "11",
+      "numero" : "2222-2222",
+      "tipo" : "Residencial"
+
+    },{
+      "ddd" : "11",
+      "numero" : "98888-2222",
+      "tipo" : "Celular"
+    }]    
+}, {
+    "codigo": 2,
+    "nome": "Diogo",
+    "sexo": "Masculino",
+    "dataNascimento": "23/01/1980",
+    "endereco": {
+      "cep": "02615-300",
+      "logradouro": "Rua zeca",
+      "numero" : "10",
+      "complemento" : "casa 3",
+      "referencia" : "Atravessa da Av. Z",
+      "tipo" : "Residencial"
+    },
+    "telefones": [{
+      "ddd" : "11",
+      "numero" : "2222-2222",
+      "tipo" : "Residencial"
+
+    },{
+      "ddd" : "11",
+      "numero" : "98888-2222",
+      "tipo" : "Celular"
+    }]
+    
+  }]
+
+}

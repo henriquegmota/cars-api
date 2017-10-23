@@ -1,0 +1,87 @@
+#%RAML 1.0 Library
+
+types: 
+  
+  Carros:
+    type: object
+    properties: 
+      carros: Carro[]
+    
+  Carro:
+    type: object
+    properties: 
+      marca?: string
+      modelo?: string
+      ano?: string
+      placa?: string
+      
+  Funcionarios:
+    type: object
+    properties: 
+      funcionarios: Funcionario[]
+      
+  Funcionario:
+    type: object
+    properties:
+      codigo?: integer
+      nome?: string
+      sexo?:
+        enum: [Masculino, Feminino]
+      dataNascimento?: string
+      endereco?: Endereco
+      telefones?: Telefone[]
+      
+  Vendas:
+    type: object
+    properties: 
+      vendas: Venda[]
+      
+  Venda:
+    type: object
+    properties: 
+      carro?: Carro
+      funcionario?: Funcionario
+      cliente?: Cliente
+      valor?: string
+      data?: string
+      
+      
+  Clientes:
+    type: object
+    properties: 
+      clientes: Cliente[]
+      
+  Cliente:
+    type: object
+    properties: 
+      codigo?: integer
+      nome?: string
+      sexo?:
+        enum: [Masculino, Feminino]
+      enderecos?: Endereco[]
+      dataNascimento?: string
+      telefones?: Telefone[]
+      email?: string
+      
+  Telefone:
+    type: object
+    properties: 
+      ddd?: string
+      numero?: string
+      tipo?: 
+        enum: [Celular, Residencial, Comercial]
+      
+  Mensagem:
+    type: object
+    properties: 
+      mensagem?: string
+  Endereco:
+    type: object
+    properties: 
+      cep?: string
+      logradouro?: string
+      numero?: string
+      complemento?: string
+      referencia?: string
+      tipo?:
+        enum: [Residencial, Comercial]

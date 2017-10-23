@@ -1,0 +1,68 @@
+{
+  "vendas": [{
+    "carro": {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": "2018",
+      "placa": "DDD-0011"
+    },
+    "funcionario" : {
+      "codigo": 1,
+      "nome": "Tobias da Silva",
+      "sexo": "Masculino",
+      "dataNascimento": "23/01/1990",
+      "endereco": {
+        "cep": "02615-000",
+        "logradouro": "Rua xico",
+        "numero" : "10",
+        "complemento" : "casa 1",
+        "referencia" : "Atravessa da Av. X",
+        "tipo" : "Residencial"
+      },
+      "telefones": [{
+        "ddd" : "11",
+        "numero" : "2222-2222",
+        "tipo" : "Residencial"
+
+      },{
+        "ddd" : "11",
+        "numero" : "98888-2222",
+        "tipo" : "Celular"
+      }]    
+      },
+    "cliente": {
+      "codigo": 1,
+      "nome": "José Magnata Lima",
+      "sexo": "Masculino",
+      "enderecos": [{
+        "cep": "02615-000",
+        "logradouro": "Rua xico",
+        "numero" : "10",
+        "complemento" : "casa 1",
+        "referencia" : "Atravessa da Av. X",
+        "tipo" : "Residencial"
+      },{
+        "cep": "02615-000",
+        "logradouro": "Rua sdsds",
+        "numero" : "90",
+        "complemento" : "predio comercial sala 95",
+        "referencia" : "Atravessa da Av. rtr",
+        "tipo" : "Comercial"
+        }],
+      "dataNascimento": "23/01/1990",
+      "telefones": [{
+        "ddd" : "11",
+        "numero" : "2222-2222",
+        "tipo" : "Residencial"
+
+      },{
+        "ddd" : "11",
+        "numero" : "98888-2222",
+        "tipo" : "Celular"
+      }],
+      "email" : "magnata@magnata.com.br"    
+    },
+    "valor": "39.000,00",
+    "data": "20/10/2017"
+  }]
+}
